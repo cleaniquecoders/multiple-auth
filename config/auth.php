@@ -37,8 +37,27 @@ return [
 
     'guards' => [
         'web' => [
+            'redirecTo' => 'home',
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'employee' => [
+            'redirecTo' => 'home.employee',
+            'driver' => 'session',
+            'provider' => 'employee',
+        ],
+
+        'administrator' => [
+            'redirecTo' => 'home.administrator',
+            'driver' => 'session',
+            'provider' => 'administrator',
+        ],
+
+        'accountant' => [
+            'redirecTo' => 'home.accountant',
+            'driver' => 'session',
+            'provider' => 'accountant',
         ],
 
         'api' => [
@@ -68,6 +87,21 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'employee' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Employee::class,
+        ],
+
+        'administrator' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Administrator::class,
+        ],
+
+        'accountant' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Accountant::class,
         ],
 
         // 'users' => [
