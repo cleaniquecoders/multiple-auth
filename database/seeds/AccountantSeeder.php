@@ -11,6 +11,6 @@ class AccountantSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\Models\Accountant::class, 10)->create();
     }
 }
