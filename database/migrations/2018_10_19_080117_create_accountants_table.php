@@ -15,6 +15,9 @@ class CreateAccountantsTable extends Migration
     {
         Schema::create('accountants', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('accountant_id')->unique();
+            $table->string('accountant_password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
