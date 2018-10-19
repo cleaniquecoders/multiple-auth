@@ -37,25 +37,25 @@ return [
 
     'guards' => [
         'web' => [
-            'redirecTo' => 'home',
+            'redirectTo' => 'home',
             'driver' => 'session',
             'provider' => 'users',
         ],
 
         'employee' => [
-            'redirecTo' => 'home.employee',
+            'redirectTo' => 'employee.home',
             'driver' => 'session',
             'provider' => 'employee',
         ],
 
         'administrator' => [
-            'redirecTo' => 'home.administrator',
+            'redirectTo' => 'administrator.home',
             'driver' => 'session',
             'provider' => 'administrator',
         ],
 
         'accountant' => [
-            'redirecTo' => 'home.accountant',
+            'redirectTo' => 'accountant.home',
             'driver' => 'session',
             'provider' => 'accountant',
         ],
